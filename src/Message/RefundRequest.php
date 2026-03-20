@@ -7,7 +7,7 @@
 
 namespace Omnipay\GPNDataEurope\Message;
 
-use Omnipay\Common\Http\Client;
+use Omnipay\Common\Http\ClientInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -22,7 +22,7 @@ class RefundRequest extends PurchaseAuthorize {
 	 * @param Omnipay\Common\Http\Client              $httpClient
 	 * @param \Symfony\Component\HttpFoundation\Request $httpRequest
 	 */
-	public function __construct(Client $httpClient, Request $httpRequest) {
+	public function __construct(ClientInterface $httpClient, Request $httpRequest) {
 		parent::__construct($httpClient, $httpRequest);
 		$this->cmd = 760;
 	}

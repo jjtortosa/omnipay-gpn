@@ -12,7 +12,7 @@ namespace Omnipay\GPNDataEurope\Message;
 use Exception;
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Exception\InvalidResponseException;
-use Omnipay\Common\Http\Client;
+use Omnipay\Common\Http\ClientInterface;
 use Omnipay\Common\Message\AbstractRequest;
 use SimpleXMLElement;
 use Symfony\Component\HttpFoundation\Request;

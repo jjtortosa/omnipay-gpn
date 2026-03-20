@@ -9,7 +9,7 @@ namespace Omnipay\GPNDataEurope\Message;
 
 use Exception;
 use Omnipay\Common\Exception\InvalidRequestException;
-use Omnipay\Common\Http\Client;
+use Omnipay\Common\Http\ClientInterface;
 use Omnipay\Common\Message\ResponseInterface;
 use SimpleXMLElement;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,7 +25,7 @@ class PaymentPage extends PurchaseAuthorize {
 	 * @param Client $httpClient
 	 * @param Request $httpRequest
 	 */
-	public function __construct(Client $httpClient, Request $httpRequest) {
+	public function __construct(ClientInterface $httpClient, Request $httpRequest) {
 		parent::__construct($httpClient, $httpRequest);
 		$this->cmd = 710;
 	}
